@@ -587,6 +587,7 @@ body.active-menu {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     padding: 30px 30px 30px 60px;
 
@@ -631,7 +632,9 @@ body.active-menu {
 }
 
 .product__column hr {
-    border: 1px #2C508C solid
+    /* border: 1px #2C508C solid */
+    background-color: #2C508C;
+    height: 1px;
 }
 
 .product__column__header h1 {
@@ -645,6 +648,18 @@ body.active-menu {
 
 .product__column__header h1:first-child {
     padding: 7px 0;
+}
+
+@media (max-width: 1140px) {
+    .product__column__header h1:first-child {
+        padding: 17px 0;
+    }
+}
+
+@media (max-width: 730px) {
+    .product__column__header h1:first-child {
+        padding: 0;
+    }
 }
 
 .product__header__el a {
@@ -707,7 +722,14 @@ body.active-menu {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 120px;
+}
+
+@media (max-width: 910px) {
+    .product__tab.active {
+        gap: 0;
+    }
 }
 
 .product__tab.active:last-child .product__row__el span {
@@ -736,6 +758,7 @@ body.active-menu {
     border-bottom: 1px solid #fff;
     margin-bottom: -1px;
     position: relative;
+    transition: all 0.1s ease-in-out;
 }
 
 .product__column__header.active::after {
@@ -752,10 +775,62 @@ body.active-menu {
 
     margin: 0 auto;
 
-    border: 1px solid #00327C;
+    /* border: 1px solid #00327C; */
+    background-color: #00327C;
+    height: 1px;
 
     /* background: #2C508C; */
     bottom: -1px;
 } 
+
+@media (max-width: 783px) {
+
+}
+
+@media (max-width: 644px) {
+    .product__column__header {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 497px) {
+    .product__wrapper {
+        padding: 0 8px;
+    }
+
+    .product__header__el {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .product__header__el a {
+        display: none;
+    }
+
+    .product__header__el img {
+        display: none;
+    }
+
+    .product__column hr {
+        padding: 0 10px;
+    }
+
+    .product__column__header h1:first-child {
+        padding: 28px 0;
+    }
+
+    .product__row__el h1 {
+        font-size: 1.2rem;
+    }
+
+    .product__header__el span {
+        font-size: 1.5rem;
+        padding: 5px 7px;
+    }
+
+    .product__column__header h1 {
+        font-size: 1.7rem;
+    }
+}
 
 /* products style */
