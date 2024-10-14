@@ -199,6 +199,7 @@ header {
 }
 
 body.active-menu {
+    background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
 }
 
@@ -235,11 +236,9 @@ body.active-menu {
 .header__menu__wrapper {
     background-color: #fff;
 
-    height: 379px;
+    height: 70vh;
 
-    height: 100vh;
-
-    margin-top: 40px;
+    margin-top: 60px;
 
     display: flex;
     flex-direction: column;
