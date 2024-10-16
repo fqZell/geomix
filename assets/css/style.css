@@ -55,7 +55,7 @@ img {
     } */
 
     .container {
-        margin: 0 30px;
+        margin: 0 12px;
     }
 }
 
@@ -978,6 +978,12 @@ hr.active {
 
     .decisions__wrapper__slider .swiper-slide span {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .decisions__wrapper__slider {
+        margin-top: 0;
     }
 }
 
