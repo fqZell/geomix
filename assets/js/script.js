@@ -35,6 +35,54 @@ const sliderBanner = () => {
     });
 };
 
+const sliderDecisions = () => {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 100,
+        watchOverflow: true,
+        slidesPerGroup: 3,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1441: {
+                slidesPerView: 3,
+                spaceBetween: 100,
+                watchOverflow: true,
+                slidesPerGroup: 3,
+            },
+            1025: {
+                slidesPerView: 3,
+                spaceBetween: 80,
+                watchOverflow: true,
+                slidesPerGroup: 3,
+            },
+            769: {
+                slidesPerView: 2,
+                spaceBetween: 80,
+                watchOverflow: true,
+                slidesPerGroup: 2,
+            },
+            500: {
+                slidesPerView: 1,
+                spaceBetween: 80,
+                watchOverflow: true,
+                slidesPerGroup: 1,
+            },
+            375: {
+                slidesPerView: 1,
+                spaceBetween: 80,
+                watchOverflow: true,
+                slidesPerGroup: 1,
+            },
+        }    
+    });
+}
+
 const tabs = () => {
     const tabsEl = document.querySelectorAll(".product__column__header");
     const tabContentsEl = document.querySelectorAll(".product__tab");
@@ -64,6 +112,7 @@ const init = () => {
     headerMenu()
     sliderBanner()
     tabs()
+    sliderDecisions()
 };
 
 document.addEventListener('DOMContentLoaded', init);
