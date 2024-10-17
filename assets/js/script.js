@@ -79,6 +79,12 @@ const sliderDecisions = () => {
                 watchOverflow: true,
                 slidesPerGroup: 1,
             },
+            350: {
+                slidesPerView: 1,
+                spaceBetween: 80,
+                watchOverflow: true,
+                slidesPerGroup: 1,
+            },
         }    
     });
 }
