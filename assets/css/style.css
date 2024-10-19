@@ -973,6 +973,7 @@ hr.active {
     font-size: 1rem; 
     font-weight: 600; 
     line-height: 24px; 
+    text-transform: none;
     letter-spacing: 0.20px;
 }
 
@@ -1043,6 +1044,10 @@ hr.active {
 }
 
 @media (max-width: 768px) {
+    .decisions__wrapper__slider .swiper {
+        padding: 0 1px;
+    }
+
     .decisions__wrapper__content p:first-child {
         font-size: 2rem;
     }
@@ -1191,7 +1196,7 @@ hr.active {
     }
 
     .services__item .txt {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -1696,6 +1701,9 @@ hr.active {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 335px;
+
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -1816,6 +1824,16 @@ hr.active {
     cursor: pointer;
 }
 
+.form__btn .btn:hover img{
+    animation: left 0.3s ease-in-out forwards;
+}
+
+@keyframes left {
+    100% {
+        margin-left: 60px;
+    }
+}
+
 .form__btn .btn button {
     border: none;
     outline: none;
@@ -1831,6 +1849,7 @@ hr.active {
 .form__btn .btn img {
     width: 20px;
     height: 20px;
+    margin-left: 0;
 }
 
 .checkbox {
